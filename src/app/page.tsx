@@ -12,6 +12,7 @@ import { CiShare1 } from "react-icons/ci";
 import { links } from "../../public/data/links";
 import DarkModeToggle from "@/components/DarkModeToggle";
 import { FaArrowDown } from "react-icons/fa";
+import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -127,8 +128,8 @@ export default function Home() {
             <>
               {projects
                 .slice(0, 3)
-                .map((projects) => (
-                  <p key={projects.title}>{projects.title}</p>
+                .map((project) => (
+                  <ProjectCard key={project.title} project={project} />
                 ))}
 
               {projects.length > 3 ? 
