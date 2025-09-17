@@ -1,6 +1,6 @@
 import { EXPERIENCE } from "@/constants/interfaces";
 
-export const experience: EXPERIENCE[] = [
+export const experiences: EXPERIENCE[] = [
     {
         company: "Sheffield University Gaming Society (SLUGS)",
         roles: ["Senior Technical Officer"],
@@ -10,11 +10,11 @@ export const experience: EXPERIENCE[] = [
     {
         company: "Sheffield Ethical Student Hackers",
         roles: ["Technical Officer"],
-        dateStart: new Date(2024, 10, 1),
+        dateStart: new Date(2024, 9, 21),
     },
     {
         company: "Enactus Sheffield",
         roles: ["CodeCreators Lead", "CodeCreators Mentor"],
-        dateStart: new Date(2024, 10),
+        dateStart: new Date(2024, 9, 16),
     },
-]
+];
