@@ -66,7 +66,7 @@ export default function Home() {
 
         <div id="about" className="section min-h-screen flex flex-col items-center mt-5 mb-auto">
           <h3 className="text-4xl text-center mb-5">About</h3>
-          <p className="w-3/4 p-2 text-lg">
+          <p className="w-3/4 p-2 text-lg min-xl:text-xl">
             I&apos;m a hardworking and curious student at <Link href="https://sheffield.ac.uk" className="text-link dark:text-link-dark">The University of Sheffield</Link>, passionate about Web Development and Data Science.
             Currently, I am <Link href="#experience" className="text-link dark:text-link-dark">{experiences[0].roles[0]} @ {experiences[0].company}</Link>, where I get to work on lots of cool stuff!
             <br />
@@ -97,15 +97,15 @@ export default function Home() {
           <h3 className="text-4xl text-center mb-5">Experience</h3>
           {experiences.length > 0 ? 
             <>
-            {sortExperiences(experiences).map(experience => 
+            {sortExperiences(experiences).slice(0, 4).map(experience => 
               <ExperienceCard key={experience.company} experience={experience} />
             )}
-            {experiences.length > 3 ? 
+            {experiences.length > 4 ? 
               <Link href="/experience">
-                View {experiences.length - 3} More Experiences
+                View {experiences.length - 4} More Experiences
               </Link>
               :
-              <p className="mt-5 text-lg">No More Experiences to Show. Check back soon(ish)</p>
+              <p className="mt-5 text-lg max-md:text-md text-center pr-2 pl-2">No More Experiences to Show. Check back soon(ish)</p>
             }
             </>
           :
@@ -140,7 +140,7 @@ export default function Home() {
               }
             </>
           ) : 
-            <div className="flex flex-col w-full h-full items-center justify-center">
+            <div className="flex flex-col w-full h-full items-center justify-center text-center">
               <p className="text-lg">No Projects!</p>
               <p>It would appear I haven&apos;t done any projects yet...</p>
               <p>But I reckon its more a problem with my site 🤦</p>
