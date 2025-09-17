@@ -1,11 +1,8 @@
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { links } from "../../public/data/links";
 
 export default function SocialLinks() {
-    const links = {
-        "linkedin": "https://linkedin.com/in/oliver-goodwin-day",
-        "github": "https://github.com/OGD311",
-    }
 
     return (
         <div className="flex w-full justify-center mb-5">

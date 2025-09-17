@@ -9,6 +9,7 @@ import ExperienceCard from "@/components/ExperienceCard";
 import Link from "next/link";
 import { projects } from "../../public/data/projects";
 import { CiShare1 } from "react-icons/ci";
+import { links } from "../../public/data/links";
 
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -75,7 +76,7 @@ export default function Home() {
               <p className="text-lg">No Experiences!</p>
               <p>It would appear I don't have any experience yet...</p>
               <p>But I reckon its more a problem with my site 🤦</p>
-              <Link href={"https://linkedin.com/in/oliver-goodwin-day"} className="text-blue-600 flex items-center">Check out my LinkedIn whilst I resolve this! <CiShare1 className="ml-2"/></Link>
+              <Link href={links.linkedin} className="text-blue-600 flex items-center">Check out my LinkedIn whilst I resolve this! <CiShare1 className="ml-2"/></Link>
             </div>
           }
 
@@ -102,7 +103,7 @@ export default function Home() {
               <p className="text-lg">No Projects!</p>
               <p>It would appear I haven't done any projects yet...</p>
               <p>But I reckon its more a problem with my site 🤦</p>
-              <Link href={"https://github.com/OGD311"} className="text-blue-600 flex items-center">Check out my Github whilst I resolve this! <CiShare1 className="ml-2"/></Link>
+              <Link href={links.github} className="text-blue-600 flex items-center">Check out my Github whilst I resolve this! <CiShare1 className="ml-2"/></Link>
             </div>
           }
 
