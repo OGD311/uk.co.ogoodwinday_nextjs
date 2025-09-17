@@ -69,7 +69,9 @@ export default function Home() {
           <p className="w-3/4 h-full p-2"></p>
         </div>
 
-        <div id="experience" className="section h-screen flex flex-col items-center mt-5">
+        <hr />
+
+        <div id="experience" className="section h-screen flex flex-col items-center mt-10">
           <h3 className="text-4xl text-center mb-5">Experience</h3>
           {experiences.length > 0 ? 
             <>
@@ -94,8 +96,10 @@ export default function Home() {
           }
 
         </div>
+
+        <hr />
         
-        <div id="projects" className="section h-screen flex flex-col items-center mt-5">
+        <div id="projects" className="section h-screen flex flex-col items-center mt-10">
           <h3 className="text-4xl text-center">Projects</h3>
           {projects.length > 0 ? (
             <>
