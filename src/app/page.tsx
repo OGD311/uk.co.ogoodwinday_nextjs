@@ -10,6 +10,7 @@ import Link from "next/link";
 import { projects } from "../../public/data/projects";
 import { CiShare1 } from "react-icons/ci";
 import { links } from "../../public/data/links";
+import DarkModeToggle from "@/components/DarkModeToggle";
 
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -47,7 +48,8 @@ export default function Home() {
 
   return (
     <div className="flex h-screen max-md:flex-col">
-      <div className="w-1/4 max-md:w-full h-full">
+      <DarkModeToggle />
+      <div className="w-1/4 max-md:w-full h-full pr-3">
         <div className="h-full flex flex-col justify-between items-center">
           <div className="flex flex-col items-center mt-5">
             <ProfilePicture />
