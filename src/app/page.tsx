@@ -65,7 +65,7 @@ export default function Home() {
       </div>
       <div className="w-3/4 max-md:w-full min-h-screen min-md:overflow-y-scroll scroll-smooth pt-5" ref={scrollContainerRef}>
 
-        <div id="about" className="section h-screen flex flex-col items-center mt-5 mb-auto">
+        <div id="about" className="section min-h-screen flex flex-col items-center mt-5 mb-auto">
           <h3 className="text-4xl text-center mb-5">About</h3>
           <p className="w-3/4 p-2 text-lg">
             I&apos;m a hardworking and curious student at <Link href="https://sheffield.ac.uk" className="text-link dark:text-link-dark">The University of Sheffield</Link>, passionate about Web Development and Data Science.
