@@ -60,7 +60,7 @@ export default function Home() {
       </div>
       <div className="w-3/4 max-md:w-full h-full min-md:overflow-y-scroll scroll-smooth pt-5" ref={scrollContainerRef}>
 
-        <div id="experience" className="section h-screen flex flex-col items-center">
+        <div id="experience" className="section h-screen flex flex-col items-center mt-5">
           <h3 className="text-4xl text-center mb-5">Experience</h3>
           {experiences.length > 0 ? 
             <>
@@ -86,7 +86,7 @@ export default function Home() {
 
         </div>
         
-        <div id="projects" className="section h-screen flex flex-col items-center">
+        <div id="projects" className="section h-screen flex flex-col items-center mt-5">
           <h3 className="text-4xl text-center">Projects</h3>
           {projects.length > 0 ? (
             <>
