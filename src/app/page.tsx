@@ -1,4 +1,5 @@
 "use client"
+import SocialLinks from "@/components/SocialLinks";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
@@ -37,8 +38,10 @@ export default function Home() {
 
   return (
     <div className="flex h-screen">
-      <div className="w-1/4 bg-gray-400"></div>
-      <div className="w-3/4" ref={scrollContainerRef}></div>
+      <div className="w-1/4 bg-gray-400">
+        <SocialLinks />
+      </div>
+      <div className="w-3/4 h-full overflow-y-scroll" ref={scrollContainerRef}></div>
     </div>
   );
 }
