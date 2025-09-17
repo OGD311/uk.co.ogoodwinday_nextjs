@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-bg: "#ffffff";
+  --color-text: "#000000";
+  --color-link: "#155dfc";
+  --color-hover: "#e4e4e7";
+
+  --color-bg-dark: "#1d1d1d";
+  --color-text-dark: "#ffffff";
+  --color-link-dark: "#155dfc";
+  --color-hover-dark: "#27272a";
+}
+
 @font-face {
   font-family: "Zalando Sans";
   src: url("./ZalandoSans.ttf");
