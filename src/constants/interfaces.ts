@@ -9,7 +9,7 @@ export interface PROJECT {
 export interface EXPERIENCE {
     company: string,
     role: string[],
-    description: string,
+    description?: string,
     dateStart: Date,
-    dateEnd: Date,
+    dateEnd?: Date
 }
