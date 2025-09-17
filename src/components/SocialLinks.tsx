@@ -8,12 +8,12 @@ export default function SocialLinks() {
     }
 
     return (
-        <div className="flex w-full justify-center">
+        <div className="flex w-full justify-center mb-5">
             <Link href={links.github} className="p-3">
-                <BsGithub />
+                <BsGithub className="h-8 w-8"/>
             </Link>
             <Link href={links.linkedin} className="p-3">
-                <BsLinkedin className="hover:bg-blue-400" />
+                <BsLinkedin className="h-8 w-8" />
             </Link>
         </div>
     );
