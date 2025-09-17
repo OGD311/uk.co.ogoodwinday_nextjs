@@ -68,7 +68,7 @@ export default function Home() {
         <div id="about" className="section h-screen flex flex-col items-center mt-5">
           <h3 className="text-4xl text-center mb-5">About</h3>
           <p className="w-3/4 p-2 text-lg">
-            I'm a hardworking and curious student at <Link href="https://sheffield.ac.uk" className="text-link dark:text-link-dark">The University of Sheffield</Link>, passionate about Web Development and Data Science.
+            I&apos;m a hardworking and curious student at <Link href="https://sheffield.ac.uk" className="text-link dark:text-link-dark">The University of Sheffield</Link>, passionate about Web Development and Data Science.
             Currently, I am <Link href="#experience" className="text-link dark:text-link-dark">{experiences[0].roles[0]} @ {experiences[0].company}</Link>, where I get to work on lots of cool stuff!
             <br />
             <br />
@@ -112,7 +112,7 @@ export default function Home() {
           :
             <div className="flex flex-col w-full h-full items-center justify-center">
               <p className="text-lg">No Experiences!</p>
-              <p>It would appear I don't have any experience yet...</p>
+              <p>It would appear I don&apos;t have any experience yet...</p>
               <p>But I reckon its more a problem with my site 🤦</p>
               <Link href={links.linkedin} className="text-blue-600 flex items-center">Check out my LinkedIn whilst I resolve this! <CiShare1 className="ml-2"/></Link>
             </div>
@@ -129,7 +129,7 @@ export default function Home() {
               {projects
                 .slice(0, 3)
                 .map((projects) => (
-                  <p>{projects.title}</p>
+                  <p key={projects.title}>{projects.title}</p>
                 ))}
 
               {projects.length > 3 ? 
@@ -143,7 +143,7 @@ export default function Home() {
           ) : 
             <div className="flex flex-col w-full h-full items-center justify-center">
               <p className="text-lg">No Projects!</p>
-              <p>It would appear I haven't done any projects yet...</p>
+              <p>It would appear I haven&apos;t done any projects yet...</p>
               <p>But I reckon its more a problem with my site 🤦</p>
               <Link href={links.github} className="text-blue-600 flex items-center">Check out my Github whilst I resolve this! <CiShare1 className="ml-2"/></Link>
             </div>
