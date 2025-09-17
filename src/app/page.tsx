@@ -56,11 +56,16 @@ export default function Home() {
               <h2 className="text-lg w-full p-2">Student, Developer <br/> Aspiring Entrepreneur</h2>
             </div>
           </div>
-          <SectionsBar sections={["experience", "projects"]} activeSection={activeSection} />
+          <SectionsBar sections={["about", "experience", "projects"]} activeSection={activeSection} />
           <SocialLinks />
         </div>
       </div>
       <div className="w-3/4 max-md:w-full h-full min-md:overflow-y-scroll scroll-smooth pt-5" ref={scrollContainerRef}>
+
+        <div id="about" className="section h-screen flex flex-col items-center mt-5">
+          <h3 className="text-4xl text-center mb-5">About</h3>
+          <p className="w-3/4 h-full p-2"></p>
+        </div>
 
         <div id="experience" className="section h-screen flex flex-col items-center mt-5">
           <h3 className="text-4xl text-center mb-5">Experience</h3>
