@@ -61,14 +61,18 @@ export default function Home() {
       <div className="w-3/4 max-md:w-full h-full min-md:overflow-y-scroll scroll-smooth pt-5" ref={scrollContainerRef}>
 
         <div id="experience" className="section h-screen flex flex-col items-center">
-          <h3 className="text-4xl text-center">Experience</h3>
+          <h3 className="text-4xl text-center mb-5">Experience</h3>
           {experiences.length > 0 ? 
             <>
             {sortExperiences(experiences).map(experience => 
               <ExperienceCard key={experience.company} experience={experience} />
             )}
-            {experiences.length > 3 && 
-              <Link href="/experience">View {experiences.length - 3} More Experiences</Link>
+            {experiences.length > 3 ? 
+              <Link href="/experience">
+                View {experiences.length - 3} More Experiences
+              </Link>
+              :
+              <p className="mt-5 text-lg">No More Experiences to Show!</p>
             }
             </>
           :
@@ -92,11 +96,13 @@ export default function Home() {
                   <ExperienceCard key={experience.company} experience={experience} />
                 ))}
 
-              {projects.length > 3 && (
+              {projects.length > 3 ? 
                 <Link href="/experience">
-                  View {projects.length - 3} More Experiences
+                  View {projects.length - 3} More Projects
                 </Link>
-              )}
+                :
+                <p>No More Projects to Show!</p>
+              }
             </>
           ) : 
             <div className="flex flex-col w-full h-full items-center justify-center">
