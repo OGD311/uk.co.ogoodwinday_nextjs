@@ -4,7 +4,7 @@ import { formatExperienceDates } from "@/utils/dates";
 export default function ExperienceCard({ experience } : { experience: EXPERIENCE }) {
 
     return (
-        <div className="flex w-4/5 border rounded-lg m-5 p-5 hover:-translate-y-3 transition duration-200">
+        <div className="flex w-4/5 border rounded-lg m-5 p-5 hover:-translate-y-3">
             <div className="flex w-full items-start">
                 <div className="flex flex-col mr-auto">
                     <h1 className="text-lg">{experience.company}</h1>
