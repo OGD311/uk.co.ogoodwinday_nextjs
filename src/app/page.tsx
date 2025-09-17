@@ -3,6 +3,12 @@ import ProfilePicture from "@/components/ProfilePicture";
 import SectionsBar from "@/components/SectionsBar";
 import SocialLinks from "@/components/SocialLinks";
 import { useEffect, useRef, useState } from "react";
+import { experiences } from "../../public/data/experience";
+import { sortExperiences } from "@/utils/sorts";
+import ExperienceCard from "@/components/ExperienceCard";
+import Link from "next/link";
+import { projects } from "../../public/data/projects";
+import { CiShare1 } from "react-icons/ci";
 
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -51,13 +57,55 @@ export default function Home() {
           <SocialLinks />
         </div>
       </div>
-      <div className="w-3/4 max-md:w-full h-full min-md:overflow-y-scroll scroll-smooth" ref={scrollContainerRef}>
+      <div className="w-3/4 max-md:w-full h-full min-md:overflow-y-scroll scroll-smooth pt-5" ref={scrollContainerRef}>
 
-        <div id="experience" className="section h-screen">
-          <h3>Experience</h3>
+        <div id="experience" className="section h-screen flex flex-col items-center">
+          <h3 className="text-4xl text-center">Experience</h3>
+          {experiences.length > 0 ? 
+            <>
+            {sortExperiences(experiences).map(experience => 
+              <ExperienceCard key={experience.company} experience={experience} />
+            )}
+            {experiences.length > 3 && 
+              <Link href="/experience">View {experiences.length - 3} More Experiences</Link>
+            }
+            </>
+          :
+            <div className="flex flex-col w-full h-full items-center justify-center">
+              <p className="text-lg">No Experiences!</p>
+              <p>It would appear I don't have any experience yet...</p>
+              <p>But I reckon its more a problem with my site 🤦</p>
+              <Link href={"https://linkedin.com/in/oliver-goodwin-day"} className="text-blue-600 flex items-center">Check out my LinkedIn whilst I resolve this! <CiShare1 className="ml-2"/></Link>
+            </div>
+          }
+
         </div>
-        <div id="projects" className="section h-screen">
-          <h3>Projects</h3>
+        
+        <div id="projects" className="section h-screen flex flex-col items-center">
+          <h3 className="text-4xl text-center">Projects</h3>
+          {projects.length > 0 ? (
+            <>
+              {sortExperiences(projects)
+                .slice(0, 3)
+                .map((experience) => (
+                  <ExperienceCard key={experience.company} experience={experience} />
+                ))}
+
+              {projects.length > 3 && (
+                <Link href="/experience">
+                  View {projects.length - 3} More Experiences
+                </Link>
+              )}
+            </>
+          ) : 
+            <div className="flex flex-col w-full h-full items-center justify-center">
+              <p className="text-lg">No Projects!</p>
+              <p>It would appear I haven't done any projects yet...</p>
+              <p>But I reckon its more a problem with my site 🤦</p>
+              <Link href={"https://github.com/OGD311"} className="text-blue-600 flex items-center">Check out my Github whilst I resolve this! <CiShare1 className="ml-2"/></Link>
+            </div>
+          }
+
         </div>
 
 
