@@ -39,21 +39,25 @@ export default function Home() {
 
 
   return (
-    <div className="flex h-screen">
-      <div className="w-1/4 bg-gray-400 h-full">
-        <div className="h-4/5 flex flex-col justify-between items-center mt-2">
-          <ProfilePicture />
-          <SectionsBar sections={["blog", "projects"]} activeSection={activeSection} />
+    <div className="flex h-screen max-md:flex-col">
+      <div className="w-1/4 max-md:w-full h-full">
+        <div className="h-full flex flex-col justify-between items-center">
+          <div className="flex flex-col items-center mt-5">
+            <ProfilePicture />
+            <h1 className="text-xl mt-2">Oli GD</h1>
+            <h2 className="text-lg w-full p-2 text-center">Student, Developer <br/> Aspiring Entrepreneur</h2>
+          </div>
+          <SectionsBar sections={["experience", "projects"]} activeSection={activeSection} />
           <SocialLinks />
         </div>
       </div>
-      <div className="w-3/4 h-full overflow-y-scroll scroll-smooth" ref={scrollContainerRef}>
+      <div className="w-3/4 max-md:w-full h-full min-md:overflow-y-scroll scroll-smooth" ref={scrollContainerRef}>
 
-        <div id="blog" className="section h-screen bg-amber-300">
-          BLOG
+        <div id="experience" className="section h-screen">
+          <h3>Experience</h3>
         </div>
-        <div id="projects" className="section h-screen bg-blue-300">
-          PROJECTS
+        <div id="projects" className="section h-screen">
+          <h3>Projects</h3>
         </div>
 
 
