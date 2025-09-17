@@ -72,7 +72,7 @@ export default function Home() {
                 View {experiences.length - 3} More Experiences
               </Link>
               :
-              <p className="mt-5 text-lg">No More Experiences to Show!</p>
+              <p className="mt-5 text-lg">No More Experiences to Show. Check back soon(ish)</p>
             }
             </>
           :
@@ -101,7 +101,7 @@ export default function Home() {
                   View {projects.length - 3} More Projects
                 </Link>
                 :
-                <p>No More Projects to Show!</p>
+                <p>No More Projects to Sho. Check back soon(ish)</p>
               }
             </>
           ) : 
