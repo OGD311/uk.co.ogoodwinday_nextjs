@@ -8,8 +8,9 @@ export interface PROJECT {
 
 export interface EXPERIENCE {
     company: string,
-    role: string[],
+    roles: string[],
     description?: string,
     dateStart: Date,
-    dateEnd?: Date
+    dateEnd?: Date,
+    link?: string
 }
