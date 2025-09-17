@@ -48,7 +48,7 @@ export default function Home() {
 
 
   return (
-    <div className="flex h-screen max-md:flex-col text-text dark:text-text-dark bg-bg dark:bg-bg-dark duration-200 transition">
+    <div className="flex min-h-screen max-md:flex-col text-text dark:text-text-dark bg-bg dark:bg-bg-dark duration-200 transition">
       <DarkModeToggle />
       <div className="w-1/4 max-md:w-full h-full pr-3">
         <div className="h-full flex flex-col justify-between items-center">
@@ -63,9 +63,9 @@ export default function Home() {
           <SocialLinks />
         </div>
       </div>
-      <div className="w-3/4 max-md:w-full h-full min-md:overflow-y-scroll scroll-smooth pt-5" ref={scrollContainerRef}>
+      <div className="w-3/4 max-md:w-full min-h-screen min-md:overflow-y-scroll scroll-smooth pt-5" ref={scrollContainerRef}>
 
-        <div id="about" className="section h-screen flex flex-col items-center mt-5">
+        <div id="about" className="section h-screen flex flex-col items-center mt-5 mb-auto">
           <h3 className="text-4xl text-center mb-5">About</h3>
           <p className="w-3/4 p-2 text-lg">
             I&apos;m a hardworking and curious student at <Link href="https://sheffield.ac.uk" className="text-link dark:text-link-dark">The University of Sheffield</Link>, passionate about Web Development and Data Science.
@@ -85,7 +85,7 @@ export default function Home() {
             <br/>
             I also like to play video games (notably Arma3) and am a rather passionate James Bond fan!
           </p>
-          <Link href="#experience" className="flex flex-col items-center mt-5">
+          <Link href="#experience" className="flex flex-col items-center mt-5 max-md:hidden">
             Scroll on to read more!
             <FaArrowDown className="w-8 h-8 mt-5 animate-bounce" />
           </Link>
