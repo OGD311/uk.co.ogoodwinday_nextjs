@@ -6,10 +6,10 @@ export default function SocialLinks() {
 
     return (
         <div className="flex w-full justify-center mb-5 mt-5">
-            <Link href={links.github} className="p-3 hover:bg-hover dark:hover:bg-hover-dark rounded-lg">
+            <Link href={links.github} className="p-3 hover:bg-hover dark:hover:bg-hover-dark rounded-lg duration-200 transition">
                 <BsGithub className="h-8 w-8"/>
             </Link>
-            <Link href={links.linkedin} className="p-3 hover:bg-hover dark:hover:bg-hover-dark rounded-lg">
+            <Link href={links.linkedin} className="p-3 hover:bg-hover dark:hover:bg-hover-dark rounded-lg duration-200 transition">
                 <BsLinkedin className="h-8 w-8" />
             </Link>
         </div>
