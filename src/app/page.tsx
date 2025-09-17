@@ -47,7 +47,7 @@ export default function Home() {
 
 
   return (
-    <div className="flex h-screen max-md:flex-col">
+    <div className="flex h-screen max-md:flex-col text-text dark:text-text-dark bg-bg dark:bg-bg-dark">
       <DarkModeToggle />
       <div className="w-1/4 max-md:w-full h-full pr-3">
         <div className="h-full flex flex-col justify-between items-center">
