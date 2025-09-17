@@ -11,6 +11,7 @@ import { projects } from "../../public/data/projects";
 import { CiShare1 } from "react-icons/ci";
 import { links } from "../../public/data/links";
 import DarkModeToggle from "@/components/DarkModeToggle";
+import { FaArrowDown } from "react-icons/fa";
 
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -66,10 +67,32 @@ export default function Home() {
 
         <div id="about" className="section h-screen flex flex-col items-center mt-5">
           <h3 className="text-4xl text-center mb-5">About</h3>
-          <p className="w-3/4 h-full p-2"></p>
+          <p className="w-3/4 p-2 text-lg">
+            I'm a hardworking and curious student at <Link href="https://sheffield.ac.uk" className="text-link dark:text-link-dark">The University of Sheffield</Link>, passionate about Web Development and Data Science.
+            Currently, I am <Link href="#experience" className="text-link dark:text-link-dark">{experiences[0].roles[0]} @ {experiences[0].company}</Link>, where I get to work on lots of cool stuff!
+            <br />
+            <br />
+            One day I hope to start my own business, once I have enough experience :)
+            <br />
+            <br />
+            In my spare time, I like to work on my own projects, which you can read more about <Link href="#projects" className="text-link dark:text-link-dark">here</Link>.{" "}
+            {projects.length > 0 && 
+              <>
+                My latest project is {projects[0].title}, utilising {projects[0].tools[0]} among others.
+              </>
+            }
+            Although the best place to keep up to date with what I do is to follow me on <Link href={links.github} className="text-link dark:text-link-dark">Github</Link>!
+            <br/>
+            I also like to play video games (notably Arma3) and am a rather passionate James Bond fan!
+          </p>
+          <Link href="#experience" className="flex flex-col items-center mt-5">
+            Scroll on to read more!
+            <FaArrowDown className="w-8 h-8 mt-5 animate-bounce" />
+          </Link>
+
         </div>
 
-        <hr />
+        <hr className="text-hover dark:text-hover-dark" />
 
         <div id="experience" className="section h-screen flex flex-col items-center mt-10">
           <h3 className="text-4xl text-center mb-5">Experience</h3>
@@ -97,16 +120,16 @@ export default function Home() {
 
         </div>
 
-        <hr />
+        <hr className="text-hover dark:text-hover-dark" />
         
         <div id="projects" className="section h-screen flex flex-col items-center mt-10">
           <h3 className="text-4xl text-center">Projects</h3>
           {projects.length > 0 ? (
             <>
-              {sortExperiences(projects)
+              {projects
                 .slice(0, 3)
-                .map((experience) => (
-                  <ExperienceCard key={experience.company} experience={experience} />
+                .map((projects) => (
+                  <p>{projects.title}</p>
                 ))}
 
               {projects.length > 3 ? 
