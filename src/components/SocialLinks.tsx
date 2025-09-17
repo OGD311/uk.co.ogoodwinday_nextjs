@@ -5,7 +5,7 @@ import { links } from "../../public/data/links";
 export default function SocialLinks() {
 
     return (
-        <div className="flex w-full justify-center mb-5">
+        <div className="flex w-full justify-center mb-5 mt-5">
             <Link href={links.github} className="p-3">
                 <BsGithub className="h-8 w-8"/>
             </Link>

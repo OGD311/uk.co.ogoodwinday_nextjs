@@ -51,8 +51,10 @@ export default function Home() {
         <div className="h-full flex flex-col justify-between items-center">
           <div className="flex flex-col items-center mt-5">
             <ProfilePicture />
-            <h1 className="text-xl mt-2">Oli GD</h1>
-            <h2 className="text-lg w-full p-2 text-center">Student, Developer <br/> Aspiring Entrepreneur</h2>
+            <div className="w-full text-left">
+              <h1 className="text-xl mt-2 pl-2">Oli GD</h1>
+              <h2 className="text-lg w-full p-2">Student, Developer <br/> Aspiring Entrepreneur</h2>
+            </div>
           </div>
           <SectionsBar sections={["experience", "projects"]} activeSection={activeSection} />
           <SocialLinks />
