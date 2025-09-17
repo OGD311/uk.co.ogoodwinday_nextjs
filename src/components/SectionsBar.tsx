@@ -7,7 +7,7 @@ export default function SectionsBar({ sections, activeSection } : { sections: st
         <div className="flex flex-col">
             {sections.map((section, i) => (
                 <Link key={i} href={`#${section.toLowerCase()}`}>
-                    <p className={`p-3 text-2xl ${activeSection == i ? '' : ''}`}>{toTitlecase(section)}</p>
+                    <p className={`p-3 text-2xl border-b-3 ${activeSection == i ? '' : 'border-transparent'}`}>{toTitlecase(section)}</p>
                 </Link>
             ))}
         </div>
