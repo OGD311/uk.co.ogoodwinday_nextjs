@@ -63,10 +63,10 @@ export default function Home() {
           <SocialLinks />
         </div>
       </div>
-      <div className="w-3/4 max-md:w-full min-h-screen min-md:overflow-y-scroll scroll-smooth pt-5" ref={scrollContainerRef}>
+      <div className="w-3/4 max-md:w-full min-h-screen min-md:overflow-y-scroll pt-5" ref={scrollContainerRef}>
 
         <div id="about" className="section min-h-screen flex flex-col items-center mt-5 mb-auto">
-          <h3 className="text-4xl text-center mb-5">About</h3>
+          <h3 className="text-4xl text-center mb-5 mt-5">About</h3>
           <p className="w-3/4 p-2 text-lg min-xl:text-xl">
             I&apos;m a hardworking and curious student at <Link href="https://sheffield.ac.uk" className="text-link dark:text-link-dark">The University of Sheffield</Link>, passionate about Web Development and Data Science.
             Currently, I am <Link href="#experience" className="text-link dark:text-link-dark">{experiences[0].roles[0]} @ {experiences[0].company}</Link>, where I get to work on lots of cool stuff!
@@ -95,7 +95,7 @@ export default function Home() {
         <hr className="text-hover dark:text-hover-dark" />
 
         <div id="experience" className="section h-screen flex flex-col items-center mt-10">
-          <h3 className="text-4xl text-center mb-5">Experience</h3>
+          <h3 className="text-4xl text-center mb-5 mt-5">Experience</h3>
           {experiences.length > 0 ? 
             <>
             {sortExperiences(experiences).slice(0, 4).map(experience => 
@@ -123,7 +123,7 @@ export default function Home() {
         <hr className="text-hover dark:text-hover-dark" />
         
         <div id="projects" className="section h-screen flex flex-col items-center mt-10">
-          <h3 className="text-4xl text-center">Projects</h3>
+          <h3 className="text-4xl text-center mt-5">Projects</h3>
           {projects.length > 0 ? (
             <>
               {projects

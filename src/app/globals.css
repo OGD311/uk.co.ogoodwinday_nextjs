@@ -21,4 +21,5 @@
 
 html {
   font-family: "Zalando Sans", sans-serif;
+  scroll-behavior: smooth;
 }
