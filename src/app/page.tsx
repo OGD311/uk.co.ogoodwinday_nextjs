@@ -96,7 +96,7 @@ export default function Home() {
 
         <hr className="text-hover dark:text-hover-dark my-10" />
 
-        <div id="experience" className="section h-screen flex flex-col items-center pb-10 mb-auto">
+        <div id="experience" className="section min-h-screen flex flex-col items-center pb-10 mb-auto">
           <h3 className="text-4xl text-center mb-5 mt-5">Experience</h3>
           {experiences.length > 0 ? 
             <>
@@ -124,7 +124,7 @@ export default function Home() {
 
         <hr className="text-hover dark:text-hover-dark my-10" />
         
-        <div id="projects" className="section h-screen flex flex-col items-center">
+        <div id="projects" className="section min-h-screen flex flex-col items-center pb-10">
           <h3 className="text-4xl text-center mt-5">Projects</h3>
           {projects.length > 0 ? (
             <>
@@ -139,7 +139,7 @@ export default function Home() {
                   View {projects.length - 3} More Projects
                 </Link>
                 :
-                <p className="mt-5 text-lg max-md:text-md text-center pr-2 pl-2">No More Projects to Show. <br className="min-md:hidden"/> Check back soon(ish)</p>
+                <p className="mt-5 text-lg max-md:text-md text-center pr-2 pl-2 mb-5">No More Projects to Show. <br className="min-md:hidden"/> Check back soon(ish)</p>
               }
             </>
           ) : 
