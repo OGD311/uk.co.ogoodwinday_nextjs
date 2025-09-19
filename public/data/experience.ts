@@ -2,7 +2,7 @@ import { EXPERIENCE } from "@/constants/interfaces";
 
 export const experiences: EXPERIENCE[] = [
     {
-        company: "Sheffield University Gaming Society (SLUGS)",
+        company: "Sheffield University Gaming Society",
         roles: ["Senior Technical Officer"],
         description: "string",
         dateStart: new Date(2025, 3, 1),
