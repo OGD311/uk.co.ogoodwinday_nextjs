@@ -11,7 +11,7 @@ export default function DarkModeToggle(){
     }, [darkMode]);
 
     return (
-        <button onClick={() => { setDarkMode(!darkMode); }} className="cursor-pointer fixed top-3 right-8 max-md:bg-zinc-300 p-2 rounded-lg">
+        <button onClick={() => { setDarkMode(!darkMode); }} className="cursor-pointer fixed top-3 right-8 max-md:bg-hover dark:max-md:bg-hover-dark p-2 rounded-lg">
             {darkMode ? <IoSunny className="w-8 h-8" /> : <IoMoon className="w-8 h-8" />}
         </button>
     )
