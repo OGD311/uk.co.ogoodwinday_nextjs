@@ -80,9 +80,9 @@ export default function Home() {
             In my spare time, I like to work on my own projects, which you can read more about <Link href="#projects" className="text-link dark:text-link-dark">here</Link>.{" "}
             {projects.length > 0 && 
               <>
-                My latest project is {projects[0].title}, utilising {projects[0].tools[0]} among others.
+                My latest project is {projects[0].title}, utilising tools like {projects[0].tools[0]} and {projects[0].tools[1]}.
               </>
-            }
+            } {" "}
             Although the best place to keep up to date with what I do is to follow me on <Link href={links.github} className="text-link dark:text-link-dark">Github</Link>!
             <br/>
             I also like to play video games (notably Arma3) and am a rather passionate James Bond fan!
