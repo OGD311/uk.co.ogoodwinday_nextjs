@@ -22,12 +22,13 @@ export default function ExperienceCard({ experience } : { experience: EXPERIENCE
     ) : 
     (
         <Link href={experience.link} className="flex w-4/5 border rounded-lg m-5 p-5 hover:-translate-y-3 duration-200 transition">
-            <div className="flex w-full items-start max-md:flex-col">
-                <div className="flex flex-col mr-auto">
-                    <h1 className="text-lg max-md:text-xl flex items-center">
+            <div className="flex w-full items-start max-md:flex-col relative">
+                <div className="flex flex-col max-md:w-full min-lg:mr-auto">
+                    <h1 className="text-lg max-md:text-xl max-md:w-4/5 flex items-center">
                         {experience.company} 
-                        <CiShare1 className="ml-2 text-xl max-md:text-2xl flex-shrink-0" />
+                        <CiShare1 className="ml-2 text-xl max-md:hidden flex-shrink-0" />
                     </h1>
+                    <CiShare1 className="absolute right-0 min-md:hidden text-xl max-md:text-2xl flex-shrink-0" />
                     <p>{formatExperienceDates(experience.dateStart, experience.dateEnd)}</p>
                 </div>
                 <ul className="flex flex-col min-md:items-end max-md:mt-2">
