@@ -1,6 +1,6 @@
 export interface PROJECT {
     title: string,
-    description?: string,
+    description: string,
     link?: string,
     company?: string,
     tools: string[]
