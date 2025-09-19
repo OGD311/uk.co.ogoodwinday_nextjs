@@ -2,7 +2,6 @@ import { EXPERIENCE } from "@/constants/interfaces";
 import { formatExperienceDates } from "@/utils/dates";
 import Link from "next/link";
 import { CiShare1 } from "react-icons/ci";
-import { FaShare } from "react-icons/fa";
 
 export default function ExperienceCard({ experience } : { experience: EXPERIENCE }) {
 
