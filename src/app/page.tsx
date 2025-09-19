@@ -52,9 +52,9 @@ export default function Home() {
       <DarkModeToggle />
       <div className="w-1/4 max-md:w-full h-full pr-3 min-md:sticky min-md:top-0">
         <div className="h-full flex flex-col justify-between items-center">
-          <div className="flex flex-col items-center mt-5">
+          <div className="flex flex-col items-center mt-5 min-md:mt-10">
             <ProfilePicture />
-            <div className="w-full text-left">
+            <div className="w-full text-left mb-5">
               <h1 className="text-xl mt-2 pl-2">Oli GD</h1>
               <h2 className="text-lg w-full p-2">Student, Developer <br/> Aspiring Entrepreneur</h2>
             </div>
@@ -65,7 +65,7 @@ export default function Home() {
       </div>
       <div className="w-3/4 max-md:w-full min-h-screen min-md:overflow-y-scroll pt-5" ref={scrollContainerRef}>
 
-        <div id="about" className="section min-h-screen flex flex-col items-center mt-5 mb-auto">
+        <div id="about" className="section min-h-screen flex flex-col items-center mt-5 pb-10">
           <h3 className="text-4xl text-center mb-5 mt-5">About</h3>
           <p className="w-3/4 p-2 text-lg min-xl:text-xl">
             I&apos;m a hardworking and curious student at <Link href="https://sheffield.ac.uk" className="text-link dark:text-link-dark">The University of Sheffield</Link>, passionate about Web Development and Data Science.
@@ -92,9 +92,9 @@ export default function Home() {
 
         </div>
 
-        <hr className="text-hover dark:text-hover-dark" />
+        <hr className="text-hover dark:text-hover-dark my-10" />
 
-        <div id="experience" className="section h-screen flex flex-col items-center mt-10">
+        <div id="experience" className="section h-screen flex flex-col items-center pb-10 mb-auto">
           <h3 className="text-4xl text-center mb-5 mt-5">Experience</h3>
           {experiences.length > 0 ? 
             <>
@@ -106,7 +106,7 @@ export default function Home() {
                 View {experiences.length - 4} More Experiences
               </Link>
               :
-              <p className="mt-5 text-lg max-md:text-md text-center pr-2 pl-2">No More Experiences to Show. Check back soon(ish)</p>
+              <p className="mt-5 text-lg max-md:text-md text-center pr-2 pl-2">No More Experiences to Show.  <br className="min-md:hidden"/> Check back soon(ish)</p>
             }
             </>
           :
@@ -120,9 +120,9 @@ export default function Home() {
 
         </div>
 
-        <hr className="text-hover dark:text-hover-dark" />
+        <hr className="text-hover dark:text-hover-dark my-10" />
         
-        <div id="projects" className="section h-screen flex flex-col items-center mt-10">
+        <div id="projects" className="section h-screen flex flex-col items-center">
           <h3 className="text-4xl text-center mt-5">Projects</h3>
           {projects.length > 0 ? (
             <>
@@ -137,7 +137,7 @@ export default function Home() {
                   View {projects.length - 3} More Projects
                 </Link>
                 :
-                <p className="mt-5 text-lg max-md:text-md text-center pr-2 pl-2">No More Projects to Show. Check back soon(ish)</p>
+                <p className="mt-5 text-lg max-md:text-md text-center pr-2 pl-2">No More Projects to Show. <br className="min-md:hidden"/> Check back soon(ish)</p>
               }
             </>
           ) : 
@@ -150,8 +150,6 @@ export default function Home() {
           }
 
         </div>
-
-
       </div>
     </div>
   );
