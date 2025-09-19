@@ -12,6 +12,12 @@
   --color-text-dark: #ffffff;
   --color-link-dark: #155dfc;
   --color-hover-dark: #27272a;
+
+
+  --color-pill-body: #dcfce7;
+  --color-pill-text: #008236;
+  --color-pill-body-dark: #016630;
+  --color-pill-text-dark: #7bf1a8;
 }
 
 @font-face {
