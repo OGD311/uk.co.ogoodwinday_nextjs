@@ -137,7 +137,7 @@ export default function Home() {
                   View {projects.length - 3} More Projects
                 </Link>
                 :
-                <p>No More Projects to Sho. Check back soon(ish)</p>
+                <p>No More Projects to Show. Check back soon(ish)</p>
               }
             </>
           ) : 
