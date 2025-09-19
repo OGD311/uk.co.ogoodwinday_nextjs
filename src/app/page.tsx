@@ -13,6 +13,7 @@ import { links } from "../../public/data/links";
 import DarkModeToggle from "@/components/DarkModeToggle";
 import { FaArrowDown } from "react-icons/fa";
 import ProjectCard from "@/components/ProjectCard";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -62,6 +63,7 @@ export default function Home() {
           <SectionsBar sections={["about", "experience", "projects"]} activeSection={activeSection} />
           <SocialLinks />
         </div>
+        <Footer />
       </div>
       <div className="w-3/4 max-md:w-full min-h-screen min-md:overflow-y-scroll pt-5" ref={scrollContainerRef}>
 
