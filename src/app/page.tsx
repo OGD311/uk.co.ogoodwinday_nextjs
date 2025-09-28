@@ -135,7 +135,7 @@ export default function Home() {
                 ))}
 
               {projects.length > 3 ? 
-                <Link href="/experience">
+                <Link href="/projects">
                   View {projects.length - 3} More Projects
                 </Link>
                 :
