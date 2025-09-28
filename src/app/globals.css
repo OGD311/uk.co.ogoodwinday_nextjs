@@ -29,3 +29,13 @@ html {
   font-family: "Zalando Sans", sans-serif;
   scroll-behavior: smooth;
 }
+
+/* Hide Scrollbars */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
