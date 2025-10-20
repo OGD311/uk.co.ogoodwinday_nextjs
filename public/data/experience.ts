@@ -9,6 +9,12 @@ export const experiences: EXPERIENCE[] = [
         link: "https://slugsoc.co.uk"
     },
     {
+        company: "Sheffield CompSoc",
+        roles: ["Second year Rep"],
+        dateStart: new Date(2025, 10, 4),
+        link: "https://shefcompsoc.uk/"
+    },
+    {
         company: "Sheffield Ethical Student Hackers",
         roles: ["Technical Officer"],
         dateStart: new Date(2024, 9, 21),

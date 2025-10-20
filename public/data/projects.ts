@@ -17,6 +17,11 @@ export const projects: PROJECT[] = [
         title: "apiT",
         tools: ["Python", "FastAPI", "Pandas"],
         description: "A FastAPI program that allows the dynamic creation of REST APIs from spreadsheet (CSV) files. It makes use of Pandas for extracting the column headers and data. It also features custom pagination, and an advanced filtering system dependent on the headers and their datatypes."
+    },
+    {
+        title: "ConCalendar",
+        tools: ["ReactNative", "Expo", "Golang", "Nativewind"],
+        description: "A mobile app that allows users to view and favourite upcoming fan conventions, with data being synced at intervals from a server, then stored locally for offline use."
     }
 
 ];
