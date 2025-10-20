@@ -10,7 +10,7 @@ export const experiences: EXPERIENCE[] = [
     },
     {
         company: "Sheffield CompSoc",
-        roles: ["Second year Rep"],
+        roles: ["Second Year Rep"],
         dateStart: new Date(2025, 10, 4),
         link: "https://shefcompsoc.uk/"
     },
