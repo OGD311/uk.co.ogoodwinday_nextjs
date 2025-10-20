@@ -104,7 +104,7 @@ export default function Home() {
               <ExperienceCard key={experience.company} experience={experience} />
             )}
             {experiences.length > 4 ? 
-              <Link href="/experience">
+              <Link href="/experience" className="p-3 hover:bg-hover dark:hover:bg-hover-dark rounded-lg duration-200 transition">
                 View {experiences.length - 4} More Experiences
               </Link>
               :
@@ -135,7 +135,7 @@ export default function Home() {
                 ))}
 
               {projects.length > 3 ? 
-                <Link href="/projects">
+                <Link href="/projects" className="p-3 hover:bg-hover dark:hover:bg-hover-dark rounded-lg duration-200 transition">
                   View {projects.length - 3} More Projects
                 </Link>
                 :
