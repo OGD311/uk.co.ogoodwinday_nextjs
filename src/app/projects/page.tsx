@@ -10,9 +10,9 @@ export default function Projects(){
 
     return projects ? (
         <div className="flex min-h-screen flex-col text-text dark:text-text-dark bg-bg dark:bg-bg-dark *:duration-200 *:transition">
-            <DarkModeToggle />
-            <div >
-                <Link href={"/"} className="flex align-middle items-center">
+            <div className="w-full h-20 flex ml-5 align-middle items-center">
+                <DarkModeToggle />
+                <Link href={"/"} className="flex h-fit p-3 align-middle items-center hover:bg-hover dark:hover:bg-hover-dark rounded-lg duration-200 transition">
                     <FaArrowLeft />
                     <span className="ml-2">Back to the site</span>
                 </Link>
